@@ -1,0 +1,306 @@
+@use '@/assets/styles/utils' as *;
+
+.footer {
+  position: relative;
+  background: $footer-background-color;
+}
+
+.observer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0 70px 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1546px;
+    max-width: 100%;
+    height: 1px;
+    background-color: $primary-color;
+  }
+}
+
+.about {
+  &_title {
+    margin-bottom: 48px;
+  }
+
+  &_description {
+    display: flex;
+
+    > :first-child {
+      width: 100%;
+      max-width: 224px;
+      margin-right: 48px;
+    }
+
+    > :last-child {
+      width: 100%;
+      max-width: 357px;
+    }
+  }
+}
+
+.schedule {
+  &_title {
+    margin-bottom: 48px;
+  }
+
+  &_description {
+    width: 402px;
+
+    &_item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 37.5px;
+
+      > :last-child {
+        width: 131px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.map {
+  position: relative;
+  width: 364px;
+  max-width: 100%;
+  aspect-ratio: 364 / 231;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(black, 0.2);
+  }
+
+  > img {
+    object-fit: cover;
+  }
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 0;
+
+  > :first-child {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.copyright {
+  width: 224px;
+  margin-right: 48px;
+}
+
+.contact {
+  width: 357px;
+
+  &_title {
+    margin-bottom: 8px;
+  }
+
+  &_description {
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.address {
+  width: 402px;
+
+  &_title {
+    margin-bottom: 8px;
+  }
+}
+
+.text {
+  width: 364px;
+  text-align: right;
+}
+
+@media screen and (max-width: 1576px) {
+  .top {
+    justify-content: space-around;
+    gap: 70px;
+    flex-wrap: wrap;
+  }
+
+  .about {
+    &_description {
+      > :first-child {
+        max-width: 357px;
+        margin-right: 37.5px;
+      }
+    }
+  }
+
+  .bottom {
+    justify-content: space-around;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  .copyright {
+    width: auto;
+  }
+
+  .contact {
+    width: auto;
+  }
+
+  .address {
+    width: auto;
+  }
+
+  .text {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .about {
+    &_description {
+      display: block;
+
+      > :first-child {
+        max-width: 402px;
+        margin-right: 0;
+        margin-bottom: 37.5px;
+      }
+
+      > :last-child {
+        max-width: 402px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top {
+    gap: 50px;
+    padding: 40px 0 50px 0;
+  }
+
+  .about {
+    &_title {
+      margin-bottom: 36px;
+    }
+
+    &_description {
+      > :first-child {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  .schedule {
+    &_title {
+      margin-bottom: 36px;
+    }
+
+    &_description {
+      &_item {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  .bottom {
+    gap: 36px;
+    padding: 50px 0;
+  }
+
+  .copyright {
+    white-space: pre-wrap;
+    margin-right: 36px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .top {
+    justify-content: space-between;
+    gap: 36px;
+    padding: 30px 0 40px 0;
+  }
+
+  .about {
+    &_title {
+      margin-bottom: 24px;
+    }
+
+    &_description {
+      > :first-child {
+        max-width: 100%;
+        margin-bottom: 12px;
+      }
+
+      > :last-child {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .schedule {
+    &_title {
+      margin-bottom: 24px;
+    }
+
+    &_description {
+      width: auto;
+
+      &_item {
+        display: block;
+
+        > :first-child {
+          margin-bottom: 12px;
+        }
+
+        > :last-child {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    justify-content: space-between;
+    gap: 24px;
+    padding: 30px 0;
+
+    > :first-child {
+      display: block;
+    }
+  }
+
+  .copyright {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+}

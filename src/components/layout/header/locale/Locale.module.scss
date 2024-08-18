@@ -1,0 +1,125 @@
+@use '@/assets/styles/utils' as *;
+
+@keyframes locale {
+  from {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: rgba($primary-color, 0.1);
+  }
+}
+
+.locale {
+  position: relative;
+  z-index: 1100;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  > span {
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 38px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 28px;
+      height: 20px;
+      border-radius: 3px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      margin-right: 6px;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 4px solid $primary-color;
+      transition: transform 0.25s ease-in-out;
+    }
+  }
+
+  &_active {
+    > span {
+      &::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+
+    .list {
+      max-height: 1000px;
+    }
+  }
+
+  &_pending {
+    .item_active {
+      background-color: transparent;
+    }
+  }
+
+  &_disabled {
+    pointer-events: none;
+  }
+}
+
+.list {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  max-height: 0;
+  border-radius: 10px;
+  background-color: $tertiary-color;
+  overflow: hidden;
+  list-style: none;
+  transition: max-height 0.6s ease-in-out;
+}
+
+.item {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 8px 5px 48px;
+  transition: background-color 0.25s ease-in-out;
+
+  &_active {
+    background-color: rgba($primary-color, 0.1);
+    pointer-events: none;
+    animation: locale 0.25s;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 20px;
+    border-radius: 3px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: rgba($secondary-color, 0.2);
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .locale > span {
+    width: 100%;
+  }
+}

@@ -1,0 +1,38 @@
+.container {
+  padding: 55px 0;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom {
+  margin-top: 55px;
+}
+
+@media screen and (max-width: 1576px) {
+  .top {
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .bottom {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .container {
+    padding: 27.5px 0;
+  }
+
+  .top {
+    gap: 20px;
+  }
+
+  .bottom {
+    margin-top: 20px;
+  }
+}

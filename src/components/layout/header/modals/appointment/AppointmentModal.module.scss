@@ -1,0 +1,20 @@
+.calendar {
+  min-height: 268px;
+
+  > div:nth-child(2) {
+    min-width: 256px;
+    margin: 0 auto;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 17.5px;
+}
+
+@media screen and (max-width: 575px) {
+  .buttons {
+    gap: 8.75px;
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "Metadata": {
+    "title": "",
+    "description": ""
+  },
+  "Header": {
+    "appointment": {
+      "name": "",
+      "phone": "",
+      "email": "",
+      "action": {
+        "book": {
+          "default": "",
+          "time": ""
+        },
+        "continue": "",
+        "call": "",
+        "repeat": ""
+      },
+      "error": {
+        "schedule": "",
+        "appointment": "",
+        "occupied": "",
+        "call": ""
+      },
+      "warning": {
+        "schedule": ""
+      },
+      "result": {
+        "title": "",
+        "description": {
+          "appointment": "",
+          "call": ""
+        },
+        "action": ""
+      }
+    },
+    "action": ""
+  },
+  "Sections": {
+    "Hero": {
+      "title": "",
+      "description": "",
+      "action": ""
+    },
+    "Hyper": { "title": "" },
+    "News": {
+      "title": "",
+      "newsfeed": {
+        "1": {
+          "image": "",
+          "date": "",
+          "title": "",
+          "action": "",
+          "more": {
+            "1": {
+              "title": "",
+              "description": {
+                "1": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "Test": {
+      "title": "",
+      "description": "",
+      "action": { "start": "", "end": "" },
+      "active": {
+        "title": { "start": "", "end": "" },
+        "questions": {
+          "1": ""
+        },
+        "answers": { "positive": "", "negative": "" },
+        "results": {
+          "normal": {
+            "title": "",
+            "description": ""
+          },
+          "medium": {
+            "score": "",
+            "title": "",
+            "description": ""
+          },
+          "bad": {
+            "score": "",
+            "title": "",
+            "description": ""
+          },
+          "critical": {
+            "score": "",
+            "title": "",
+            "description": ""
+          }
+        }
+      }
+    },
+    "Monitoring": {
+      "title": "",
+      "action": "",
+      "Ultrasound": {
+        "title": "",
+        "description": "",
+        "action": "",
+        "more": {
+          "1": {
+            "title": "",
+            "description": {
+              "1": ""
+            }
+          }
+        }
+      },
+      "Biopsy": {
+        "title": "",
+        "description": "",
+        "action": "",
+        "more": {
+          "1": {
+            "title": "",
+            "description": {
+              "1": ""
+            }
+          }
+        }
+      },
+      "Oncoscreening": {
+        "title": "",
+        "description": "",
+        "action": "",
+        "more": {
+          "1": {
+            "title": "",
+            "description": {
+              "1": ""
+            }
+          }
+        }
+      }
+    },
+    "Tells": {
+      "title": "",
+      "description": "",
+      "action": "",
+      "more": {
+        "1": {
+          "title": "",
+          "description": {
+            "1": ""
+          }
+        }
+      }
+    }
+  },
+  "Footer": {
+    "about": {
+      "title": "",
+      "description": "",
+      "goal": ""
+    },
+    "schedule": {
+      "title": "",
+      "description": {
+        "weekdays": { "title": "", "description": "" },
+        "saturday": { "title": "", "description": "" },
+        "sunday": { "title": "", "description": "" }
+      }
+    },
+    "map": "",
+    "copyright": "",
+    "contact": { "title": "", "description": "" },
+    "address": { "title": "", "description": "" },
+    "action": ""
+  },
+  "Admin": {
+    "login": {
+      "title": "",
+      "password": "",
+      "action": {
+        "confirm": {
+          "default": "",
+          "pending": ""
+        }
+      }
+    },
+    "action": {
+      "add": "",
+      "delete": "",
+      "save": {
+        "default": "",
+        "pending": "",
+        "completed": ""
+      }
+    },
+    "field": {
+      "image": {
+        "error": ""
+      }
+    }
+  }
+}

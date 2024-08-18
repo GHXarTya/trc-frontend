@@ -1,0 +1,324 @@
+@use 'utils' as *;
+
+.typography {
+  cursor: text;
+  white-space: pre-wrap;
+
+  &,
+  * {
+    user-select: text;
+  }
+
+  &_color {
+    &_primary {
+      &::selection,
+      *::selection {
+        color: $primary-selection-color;
+      }
+    }
+
+    &_secondary {
+      &::selection,
+      *::selection {
+        color: $secondary-selection-color;
+      }
+    }
+
+    &_tertiary {
+      &::selection,
+      *::selection {
+        color: $tertiary-selection-color;
+      }
+    }
+  }
+
+  &_fontSize {
+    &_layout {
+      &_large {
+        font-size: 50px;
+      }
+
+      &_heading {
+        font-size: 30px;
+      }
+
+      &_subheading {
+        font-size: 22px;
+      }
+
+      &_body {
+        font-size: 20px;
+      }
+
+      &_small {
+        font-size: 14px;
+      }
+    }
+
+    &_page {
+      &_large {
+        font-size: 70px;
+      }
+
+      &_heading {
+        font-size: 50px;
+      }
+
+      &_subheading {
+        font-size: 30px;
+      }
+
+      &_body {
+        font-size: 22px;
+      }
+
+      &_small {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &_fontWeight {
+    &_regular {
+      font-weight: 400;
+    }
+
+    &_medium {
+      font-weight: 500;
+    }
+
+    &_bold {
+      font-weight: 700;
+    }
+  }
+
+  &_color {
+    &_primary {
+      color: $primary-color;
+    }
+
+    &_secondary {
+      color: $secondary-color;
+    }
+
+    &_tertiary {
+      color: $tertiary-color;
+    }
+  }
+
+  &_underline {
+    position: relative;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 5.75%;
+      left: 0;
+      height: 0.09em;
+    }
+
+    &.typography_color {
+      &_primary {
+        &::after {
+          background-color: $primary-color;
+        }
+      }
+
+      &_secondary {
+        &::after {
+          background-color: $secondary-color;
+        }
+      }
+
+      &_tertiary {
+        &::after {
+          background-color: $tertiary-color;
+        }
+      }
+    }
+  }
+
+  &_translucent {
+    &.typography_color {
+      &_primary {
+        color: $primary-translucent-color;
+
+        &.typography_underline {
+          &::after {
+            background-color: $primary-translucent-color;
+          }
+        }
+      }
+
+      &_secondary {
+        color: $secondary-translucent-color;
+
+        &.typography_underline {
+          &::after {
+            background-color: $secondary-translucent-color;
+          }
+        }
+      }
+
+      &_tertiary {
+        color: $tertiary-translucent-color;
+
+        &.typography_underline {
+          &::after {
+            background-color: $tertiary-translucent-color;
+          }
+        }
+      }
+    }
+  }
+
+  &_clickable {
+    cursor: pointer;
+
+    &,
+    * {
+      user-select: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .typography {
+    white-space: normal;
+
+    &_underline {
+      white-space: nowrap;
+    }
+
+    &_fontSize {
+      &_layout {
+        &_large {
+          font-size: 40px;
+        }
+
+        &_heading {
+          font-size: 27.5px;
+        }
+      }
+
+      &_page {
+        &_large {
+          font-size: 50px;
+        }
+
+        &_heading {
+          font-size: 40px;
+        }
+
+        &_subheading {
+          font-size: 27.5px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .typography {
+    &_fontSize {
+      &_layout {
+        &_large {
+          font-size: 30px;
+        }
+
+        &_heading {
+          font-size: 25px;
+        }
+
+        &_subheading {
+          font-size: 20px;
+        }
+
+        &_body {
+          font-size: 18px;
+        }
+
+        &_small {
+          font-size: 13px;
+        }
+      }
+
+      &_page {
+        &_large {
+          font-size: 40px;
+        }
+
+        &_heading {
+          font-size: 30px;
+        }
+
+        &_subheading {
+          font-size: 25px;
+        }
+
+        &_body {
+          font-size: 20px;
+        }
+
+        &_small {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .typography {
+    &_fontSize {
+      &_layout {
+        &_large {
+          font-size: 25px;
+        }
+
+        &_heading {
+          font-size: 23px;
+        }
+
+        &_subheading {
+          font-size: 18px;
+        }
+
+        &_body {
+          font-size: 16px;
+        }
+
+        &_small {
+          font-size: 11px;
+        }
+      }
+
+      &_page {
+        &_large {
+          font-size: 30px;
+        }
+
+        &_heading {
+          font-size: 25px;
+        }
+
+        &_subheading {
+          font-size: 23px;
+        }
+
+        &_body {
+          font-size: 18px;
+        }
+
+        &_small {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+$helveticaNeue-font: var(--font-helveticaNeue);
+$primary-color: rgb(255, 255, 255);
+$secondary-color: rgb(15, 15, 15);
+$tertiary-color: rgb(34, 34, 34);
+$primary-translucent-color: rgba($primary-color, 0.8);
+$secondary-translucent-color: rgba($secondary-color, 0.8);
+$tertiary-translucent-color: rgba($tertiary-color, 0.8);
+$primary-selection-color: #90ee90;
+$secondary-selection-color: #228b22;
+$tertiary-selection-color: #228b22;
+$test-background-color: linear-gradient(225deg, #dedede 0%, #a9fff0 100%);
+$ultrasound-background-color: linear-gradient(151deg, #a58bac 0%, #b679c7 100%);
+$biopsy-background-color: linear-gradient(
+  226deg,
+  #19478f 0%,
+  #5d8db9 49%,
+  #2a8bc1 100%
+);
+$oncoscreening-background-color: linear-gradient(
+  151deg,
+  #1d1d1d 0%,
+  #030303 100%
+);
+$tells-background-color: linear-gradient(267deg, #a9fff0 0%, #8d8d8d50 100%);
+$footer-background-color: linear-gradient(225deg, #0e0e0e 0%, #2e2b2b 100%);

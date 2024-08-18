@@ -1,0 +1,15 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.text {
+  text-align: center;
+}
+
+@media screen and (max-width: 575px) {
+  .error {
+    gap: 12.5px;
+  }
+}
