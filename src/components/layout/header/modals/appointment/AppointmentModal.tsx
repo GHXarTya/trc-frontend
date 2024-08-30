@@ -1,6 +1,7 @@
 import { parseDate } from '@internationalized/date'
 import { Calendar } from '@nextui-org/calendar'
 import { useMutation } from '@tanstack/react-query'
+import clsx from 'clsx'
 import { validate } from 'email-validator'
 import { CountryCode, isValidNumber } from 'libphonenumber-js'
 import { useEffect, useRef } from 'react'
@@ -10,6 +11,7 @@ import Button from '@/ui/button/Button'
 import Input from '@/ui/input/Input'
 import Loader from '@/ui/loader/Loader'
 import Modal from '@/ui/modal/Modal'
+import Text from '@/ui/text/Text'
 
 import { useStore } from '@/store'
 
@@ -223,6 +225,9 @@ export default function AppointmentModal() {
               })
             }
             color='primary'
+            className={clsx({
+              [styles.error]: name && !isNameValid
+            })}
             tKey='Header.appointment.name'
           />
           <Input
@@ -234,6 +239,9 @@ export default function AppointmentModal() {
               })
             }
             color='primary'
+            className={clsx({
+              [styles.error]: phone && !isPhoneValid
+            })}
             tKey='Header.appointment.phone'
           />
           <Input
@@ -245,6 +253,9 @@ export default function AppointmentModal() {
               })
             }
             color='primary'
+            className={clsx({
+              [styles.error]: email && !isEmailValid
+            })}
             tKey='Header.appointment.email'
           />
           <div className={styles.buttons}>
@@ -282,6 +293,13 @@ export default function AppointmentModal() {
               />
             )}
           </div>
+          <Text
+            located='layout'
+            size='body'
+            weight={400}
+            color='primary'
+            tKey='Header.appointment.hint'
+          />
         </>
       )}
     </Modal>

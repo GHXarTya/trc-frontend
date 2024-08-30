@@ -37,6 +37,7 @@ export default function Hero() {
             size='body'
             weight={400}
             color='primary'
+            className={styles.description}
             tKey='Sections.Hero.description'
             tRich
           />
@@ -55,6 +56,7 @@ export default function Hero() {
           size='body'
           weight={400}
           color='primary'
+          className={styles.description}
           tKey='Sections.Hero.description'
           tRich
         />

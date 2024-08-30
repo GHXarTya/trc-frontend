@@ -49,7 +49,11 @@
   margin-bottom: 38px;
 }
 
-@media screen and (max-width: 1440px) {
+.description {
+  line-height: 27px;
+}
+
+@media screen and (max-width: 1576px) {
   .container {
     justify-content: flex-end;
     align-items: center;
@@ -92,9 +96,19 @@
     margin-bottom: 19px;
   }
 
+  .description {
+    line-height: 24px;
+  }
+
   .container {
     & > div > *:nth-child(2) {
       margin-bottom: 38px;
     }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .description {
+    line-height: 22px;
   }
 }
