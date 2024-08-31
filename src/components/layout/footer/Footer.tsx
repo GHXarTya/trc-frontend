@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer'
 
 import Text from '@/ui/text/Text'
 
-import { usePathname } from '@/config/helpers/locale.helper'
+import { Link, usePathname } from '@/config/helpers/locale.helper'
 import { ADMIN_PAGE } from '@/config/routes.config'
 
 import { useStore } from '@/store'
@@ -99,7 +99,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <a
+          <Link
             href='https://maps.app.goo.gl/V8r3AWrFcBmmgLVU7'
             target='_blank'
             className={styles.map}
@@ -113,7 +113,7 @@ export default function Footer() {
                 quality={100}
               />
             )}
-          </a>
+          </Link>
         </div>
         <div className={styles.bottom}>
           <div>
@@ -135,7 +135,7 @@ export default function Footer() {
                 className={styles.contact_title}
                 tKey='Footer.contact.title'
               />
-              <a href={tel}>
+              <Link href={tel}>
                 <Text
                   located='layout'
                   size='subheading'
@@ -144,7 +144,7 @@ export default function Footer() {
                   className={styles.contact_description}
                   tKey='Footer.contact.description'
                 />
-              </a>
+              </Link>
             </div>
           </div>
           <div className={styles.address}>

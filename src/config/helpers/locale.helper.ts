@@ -9,7 +9,7 @@ export const getLocaleLanguageCode = (locale: Locale) => locale.split('-')[0]
 export const getLocaleCountryCode = (locale: Locale) =>
   locale.split('-')[1].toLowerCase()
 
-export const { Link, getPathname, redirect, usePathname, useRouter } =
+export const { Link, usePathname, useRouter } =
   createLocalizedPathnamesNavigation({
     locales,
     pathnames

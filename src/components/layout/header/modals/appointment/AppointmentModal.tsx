@@ -293,13 +293,15 @@ export default function AppointmentModal() {
               />
             )}
           </div>
-          <Text
-            located='layout'
-            size='body'
-            weight={400}
-            color='primary'
-            tKey='Header.appointment.hint'
-          />
+          {(!name || !phone) && (
+            <Text
+              located='layout'
+              size='body'
+              weight={400}
+              color='primary'
+              tKey='Header.appointment.hint'
+            />
+          )}
         </>
       )}
     </Modal>

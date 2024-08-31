@@ -3,7 +3,6 @@ import messages from '@/messages/markup.json'
 type Messages = typeof messages
 
 declare global {
-  // Use type safe message keys with `next-intl`
   interface IntlMessages extends Messages {}
 
   type IntlMessageKeys<ObjectType, Keys extends string = ''> = {

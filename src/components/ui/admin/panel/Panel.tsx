@@ -77,6 +77,10 @@ export default function Panel() {
                     '1': ''
                   }
                 }
+              },
+              source: {
+                link: '',
+                text: ''
               }
             }
         }

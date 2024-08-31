@@ -3,6 +3,8 @@ import { Fragment } from 'react'
 import Modal from '@/ui/modal/Modal'
 import Text from '@/ui/text/Text'
 
+import { Link } from '@/config/helpers/locale.helper'
+
 import { useStore } from '@/store'
 
 import { useIntlMessages } from '@/hooks/useIntlMessages'
@@ -65,6 +67,19 @@ export default function NewsModal() {
               ))}
             </Fragment>
           ))}
+          <Link
+            href={messages.Sections.News.newsfeed[key].source.link}
+            target='_blank'
+          >
+            <Text
+              located='page'
+              size='body'
+              weight={500}
+              color='secondary'
+              underline
+              tKey={`Sections.News.newsfeed.${key}.source.text`}
+            />
+          </Link>
         </Modal>
       ))}
     </>

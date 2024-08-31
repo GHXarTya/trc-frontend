@@ -3,6 +3,8 @@ import { Fragment } from 'react'
 import Modal from '@/ui/modal/Modal'
 import Text from '@/ui/text/Text'
 
+import { Link } from '@/config/helpers/locale.helper'
+
 import { useIntlMessages } from '@/hooks/useIntlMessages'
 
 export default function OncoscreeningModal() {
@@ -64,6 +66,19 @@ export default function OncoscreeningModal() {
           ))}
         </Fragment>
       ))}
+      <Link
+        href={messages.Sections.Monitoring.Oncoscreening.source.link}
+        target='_blank'
+      >
+        <Text
+          located='page'
+          size='body'
+          weight={500}
+          color='secondary'
+          underline
+          tKey='Sections.Monitoring.Oncoscreening.source.text'
+        />
+      </Link>
     </Modal>
   )
 }
