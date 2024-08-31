@@ -3,8 +3,6 @@ import { Fragment } from 'react'
 import Modal from '@/ui/modal/Modal'
 import Text from '@/ui/text/Text'
 
-import { Link } from '@/config/helpers/locale.helper'
-
 import { useIntlMessages } from '@/hooks/useIntlMessages'
 
 export default function BiopsyModal() {
@@ -66,10 +64,7 @@ export default function BiopsyModal() {
           ))}
         </Fragment>
       ))}
-      <Link
-        href={messages.Sections.Monitoring.Biopsy.source.link}
-        target='_blank'
-      >
+      <a href={messages.Sections.Monitoring.Biopsy.source.link} target='_blank'>
         <Text
           located='page'
           size='body'
@@ -78,7 +73,7 @@ export default function BiopsyModal() {
           underline
           tKey='Sections.Monitoring.Biopsy.source.text'
         />
-      </Link>
+      </a>
     </Modal>
   )
 }

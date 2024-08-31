@@ -3,8 +3,6 @@ import { Fragment } from 'react'
 import Modal from '@/ui/modal/Modal'
 import Text from '@/ui/text/Text'
 
-import { Link } from '@/config/helpers/locale.helper'
-
 import { useIntlMessages } from '@/hooks/useIntlMessages'
 
 export default function TellsModal() {
@@ -64,7 +62,7 @@ export default function TellsModal() {
           ))}
         </Fragment>
       ))}
-      <Link href={messages.Sections.Tells.source.link} target='_blank'>
+      <a href={messages.Sections.Tells.source.link} target='_blank'>
         <Text
           located='page'
           size='body'
@@ -73,7 +71,7 @@ export default function TellsModal() {
           underline
           tKey='Sections.Tells.source.text'
         />
-      </Link>
+      </a>
     </Modal>
   )
 }

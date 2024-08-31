@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer'
 
 import Text from '@/ui/text/Text'
 
-import { Link, usePathname } from '@/config/helpers/locale.helper'
+import { usePathname } from '@/config/helpers/locale.helper'
 import { ADMIN_PAGE } from '@/config/routes.config'
 
 import { useStore } from '@/store'
@@ -30,7 +30,7 @@ export default function Footer() {
   const messages = useIntlMessages()
 
   const tel =
-    'tel:' + messages.Footer.contact.description.replace(/[\s()+]+/g, '')
+    'tel:' + messages.Footer.contact.description.replace(/[\s()]+/g, '')
 
   if (isAdmin) return
 
@@ -99,7 +99,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <Link
+          <a
             href='https://maps.app.goo.gl/V8r3AWrFcBmmgLVU7'
             target='_blank'
             className={styles.map}
@@ -113,7 +113,7 @@ export default function Footer() {
                 quality={100}
               />
             )}
-          </Link>
+          </a>
         </div>
         <div className={styles.bottom}>
           <div>
@@ -135,7 +135,7 @@ export default function Footer() {
                 className={styles.contact_title}
                 tKey='Footer.contact.title'
               />
-              <Link href={tel}>
+              <a href={tel}>
                 <Text
                   located='layout'
                   size='subheading'
@@ -144,7 +144,7 @@ export default function Footer() {
                   className={styles.contact_description}
                   tKey='Footer.contact.description'
                 />
-              </Link>
+              </a>
             </div>
           </div>
           <div className={styles.address}>
